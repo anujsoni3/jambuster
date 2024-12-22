@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login Page</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	
+	<div class="login">
+        <h3>Log In</h3>
+		<form id="loginForm">
+			<label><b>User Name:</b></label>
+			<input type="text" name="Uname" id="Uname" placeholder="Username" required>
+			<br><br>
+			<label><b>Password:</b></label>
+			<input type="Password" name="Pass" id="Pass" placeholder="Password" required>
+			<br><br>
+			<input type="button" name="log" id="log" value="Log In" onclick="login()"><br>
+            <div><a  href="#" onclick="forgotPassword()">Forgot Password?</a>
+            </div>
+            </form>
+	</div>
+	<div class="register">
+		<form id="registerForm">
+			<label><b>User Name:</b></label>
+			<input type="text" name="RUname" id="RUname" placeholder="Username" required>
+			<br><br>
+			<label><b>Password:</b></label>
+		<input type="Password" name="RPass" id="RPass" placeholder="Password" required>
+			<br><br>
+			<input type="button" name="reg" id="reg" value="Register Here" onclick="register()">
+		</form>
+	</div>
+	<script src="script.js"></script>
+</body>
+</html>

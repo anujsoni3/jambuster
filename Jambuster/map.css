@@ -1,0 +1,18 @@
+ /* Ensure the map fills the entire container */
+ #map {
+    height: 400px;
+    width: 100%;
+    padding-top: 170px;
+    border-radius: 10px;
+    
+  }
+
+  /* Style the modal dialog */
+  .modal-dialog {
+    max-width: 800px;
+  }
+
+  /* Blur the background when the modal is open */
+  .modal-open .modal-backdrop {
+    opacity: 0.5;
+  }

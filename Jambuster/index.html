@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Madimi+One&family=Poppins:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <div class="login-container">
+        <form name="loginForm" action="login.php" method="POST" onsubmit="return validateLoginForm()">
+
+            <p class="createaccount">Login</p>
+            <label  for="name"><p class="ab">Email:</p></label>
+            <input type="email" name="myemail" id="email" class="email" placeholder="Email" required>
+            <label for="pass"><p class="ab">Password:</p></label>
+            <input type="password" id="password" class="password" name="password" placeholder="Password" required><br><br>
+            <button type="submit">Login</button>
+        </form>
+        <div class="options">
+            <a href="create_account.html">Create Account</a>
+            <a href="forgot_password.html">Forgot Password?</a>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script>
+        
+
+        document.querySelector("form[name='loginForm']").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            // Assuming you want to navigate to api.html after form submission
+            window.location.href = "api.html";
+        });
+    </script>
+</body>
+</html>

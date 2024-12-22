@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Live News</title>
+<style>
+  /* Style for news container */
+  body{
+    background-image: linear-gradient(to bottom right, #012a4a, #8ECAE6);
+  }
+  #news-container {
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+  }
+
+  /* Style for individual news items */
+  .news-item {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .news-item h2 {
+    margin-bottom: 5px;
+    color: #333;
+  }
+
+  .news-item p {
+    margin: 0;
+    color: #666;
+  }
+
+  .news-item p.source {
+    font-style: italic;
+    color: #888;
+  }
+
+  .news-item p.publishedAt {
+    font-style: italic;
+    color: #1a0079;
+  }
+</style>
+</head>
+<body>
+<!-- News container -->
+<div id="news-container"></div>
+
+<!-- Include the JavaScript -->
+<script>
+  // Your News API key
+  var apiKey = 'e56a440bb30f4f1683bf1278bafa1f73';
+
+  // Fetch news data from the API
+  function fetchNews() {
+    var url = 'https://newsapi.org/v2/top-headlines?' +
+              'country=us&' +
+              'apiKey=' + apiKey;
+
+    fetch(url)
+      .then(response => response.json())
+      .then(data => {
+        // Display news articles on the webpage
+        displayNews(data.articles);
+      })
+      .catch(error => {
+        console.error('Error fetching news:', error);
+      });
+  }
+
+  // Display news articles on the webpage
+  function displayNews(articles) {
+    var newsContainer = document.getElementById('news-container');
+
+    articles.forEach(article => {
+      var newsItem = document.createElement('div');
+      newsItem.classList.add('news-item');
+
+      var title = document.createElement('h2');
+      title.textContent = article.title;
+
+      var description = document.createElement('p');
+      description.textContent = article.description;
+
+      var source = document.createElement('p');
+      source.textContent = 'Source: ' + article.source.name;
+      source.classList.add('source');
+
+      var publishedAt = document.createElement('p');
+      publishedAt.textContent = 'Published At: ' + article.publishedAt;
+      publishedAt.classList.add('publishedAt');
+
+      newsItem.appendChild(title);
+      newsItem.appendChild(description);
+      newsItem.appendChild(source);
+      newsItem.appendChild(publishedAt);
+
+      newsContainer.appendChild(newsItem);
+    });
+  }
+
+  // Load news when the page loads
+  window.onload = function() {
+    fetchNews();
+  };
+
+
+</script>
+<div>
+  <ul>
+   <li><button id="back" onclick="window.open('api.html')">Back</button></li>
+  </ul>
+</div>
+</body>
+</html>

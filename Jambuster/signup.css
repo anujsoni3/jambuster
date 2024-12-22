@@ -1,0 +1,84 @@
+*{
+    padding: 0px;
+}
+#b{
+    text-shadow: none;
+}
+
+.signup{
+    text-shadow: 3px 3px 5px rgb(86, 2, 254) ;
+    color:#a8dadc ;
+    font-size: larger;
+    font-weight: 500;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.p1{
+    font-size: small;
+    font-style: italic;
+    color: #e3d5ca;
+}
+.p2{
+    color: #e3d5ca;
+    font-style: oblique;
+    font-size: rem;
+}
+
+/* isme hover karana he */
+.createaccount{
+
+    color: whitesmoke;
+    border-radius: 3px;
+    background-color: rgba(0, 147, 245, 0.792);
+    width: 205px;
+    height: 35px;
+    border: 20px;
+}
+
+.fullname{
+    color: #a8dadc;
+    font-size: medium;
+    font-variant: small-caps;
+    font-stretch: expanded;
+    height: 20px;
+    border: #003566;
+
+    
+}
+.outerbox{
+    border: 3px solid #006d77;
+    height: 500px;
+    width: 350px; 
+    /* height: 100%;
+    width: 100%; 
+    margin: 35%;*/
+    border-radius: 20px;
+    padding: 0px 8px 30px 0px;    
+}
+
+.innerbox{
+    padding: 0px 0px 30px 80px;
+    
+}
+
+body {
+    background: linear-gradient(to bottom right,#003566,#001d3d);
+    width: 100%;
+    height: 100%;
+
+}
+
+#email{
+    width: 200px;
+    height: 20px;
+}
+
+#password{
+    width: 200px;
+    height: 20px;
+}
+
+#fullname{
+    width: 200px;
+    height: 20px;
+}
